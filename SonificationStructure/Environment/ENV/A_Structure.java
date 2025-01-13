@@ -4,10 +4,10 @@ import java.awt.Color;
 
 import Constructs.Construct;
 import Constructs.Point;
+import FlatLand.Physics.TypeOfEntity;
 import FlatLander.BoundingBox;
 import FlatLander.FlatLander;
 import FlatLander.FlatLanderClassification;
-import FlatLander.TypeOfEntity;
 
 
 public class A_Structure implements Structure {

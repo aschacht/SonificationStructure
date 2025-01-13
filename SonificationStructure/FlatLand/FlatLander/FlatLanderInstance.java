@@ -3,6 +3,8 @@ package FlatLander;
 
 import java.awt.Color;
 
+import FlatLand.Physics.TypeOfEntity;
+
 
 public class FlatLanderInstance extends FlatLander {
 

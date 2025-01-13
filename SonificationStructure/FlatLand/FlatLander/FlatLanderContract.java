@@ -5,6 +5,7 @@ import java.awt.Color;
 
 import Constructs.Construct;
 import Constructs.Point;
+import FlatLand.Physics.TypeOfEntity;
 
 
 

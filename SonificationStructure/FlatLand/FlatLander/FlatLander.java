@@ -3,34 +3,32 @@ package FlatLander;
 import java.awt.Color;
 import Constructs.Construct;
 import Constructs.Point;
+import FlatLand.Physics.TypeOfEntity;
 
-
-
-
-public abstract class FlatLander  implements FlatLanderContract {
+public abstract class FlatLander implements FlatLanderContract {
 
 	protected Color myColor;
-	public  int x;
-	public  int y;
-	protected  int moveX = 0;
-	protected  int moveY = 0;
+	public int x;
+	public int y;
+	protected int moveX = 0;
+	protected int moveY = 0;
 
 	protected int time;
 	protected int actionsPerTimeUnit;
 
 	protected FlatLanderMemory memory;
 	public double direction;
-	
+
 	protected String name;
 	public boolean collidable;
 	protected boolean shouldPhysicsApply;
-	protected TypeOfEntity entityType;
+	private TypeOfEntity entityType;
 	protected int previousX;
 	protected int previousY;
 	protected FlatLanderClassification classification = FlatLanderClassification.UNDETERMINED;
 
-	public FlatLander( int x, int y, String name, double startingDir,
-			boolean collidable, boolean shouldPhysicsApply, TypeOfEntity entityType, Color myColor) {
+	public FlatLander(int x, int y, String name, double startingDir, boolean collidable, boolean shouldPhysicsApply,
+			TypeOfEntity entityType, Color myColor) {
 		this.myColor = myColor;
 		this.x = x;
 		this.y = y;
@@ -45,9 +43,7 @@ public abstract class FlatLander  implements FlatLanderContract {
 
 		direction = startingDir;// 1.5708 + 1.5708;
 
-
 	}
-
 
 
 	public Color getColor() {
@@ -62,18 +58,12 @@ public abstract class FlatLander  implements FlatLanderContract {
 		return y;
 	}
 
-	
 	public void update() {
 		moveX();
 		moveY();
 		time++;
 	}
 
-
-	
-
-
-	
 	public void pushtoMemory(Point point) {
 		memory.pushConstruct(point);
 	}
@@ -100,14 +90,14 @@ public abstract class FlatLander  implements FlatLanderContract {
 	}
 
 	public void moveX() {
-		
+
 		x = x + moveX;
 	}
 
 	public void moveY() {
-		
+
 		y = y + moveY;
-		
+
 	}
 
 	public void setX(int i) {
@@ -115,17 +105,9 @@ public abstract class FlatLander  implements FlatLanderContract {
 	}
 
 	public void setY(int i) {
-	
+
 		y = i;
 	}
-
-
-
-
-
-
-
-
 
 	public int getMoveY() {
 
@@ -140,7 +122,7 @@ public abstract class FlatLander  implements FlatLanderContract {
 	public boolean shouldPhysicsApply() {
 
 		return shouldPhysicsApply;
-	} 
+	}
 
 	public TypeOfEntity getEntityType() {
 		return entityType;
@@ -163,19 +145,13 @@ public abstract class FlatLander  implements FlatLanderContract {
 	}
 
 	public void changeMoveYBy(int i) {
-		moveY = moveY+i;
-		
-		
-		
-		
-		
+		moveY = moveY + i;
+
 	}
 
 	public void changeMoveXBy(int i) {
-		moveX = moveX+i;
+		moveX = moveX + i;
 	}
-
-
 
 	public FlatLanderClassification getClassification() {
 		return classification;
@@ -184,11 +160,5 @@ public abstract class FlatLander  implements FlatLanderContract {
 	public void setClassification(FlatLanderClassification classification) {
 		this.classification = classification;
 	}
-
-
-
-
-
-
 
 }

@@ -1,5 +1,7 @@
 package DEG;
 
-public interface Degrades {
+import ITM.ITM;
+
+public interface Degrades  extends ITM{
 
 }

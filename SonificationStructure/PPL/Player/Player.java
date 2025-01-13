@@ -6,9 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import Constructs.Point;
+import FlatLand.Physics.TypeOfEntity;
 import FlatLander.BoundingBox;
 import FlatLander.FlatLander;
-import FlatLander.TypeOfEntity;
 
 public class Player extends FlatLander{
 
